@@ -12,10 +12,10 @@
     <script>
       function Roll() {
         let values = [1,2,3,4,5,6,7];
-        for (i < 7; i = 0; i++) {
+        for (let i = 0; i < 7; i++) {
           document.getElementById("output").innerHTML = values[Math.floor(Math.random() * values.length)];
-        }
-      }
+        };
+      };
       document.getElementById("rollerB").addEventListener("click", Roll);
     </script>
   </body>
