@@ -26,8 +26,9 @@
         return mult;
       };
       document.getElementById("rollerB").addEventListener("click", () => {
-        console.log(parseInt(document.getElementById("timesInput").innerHTML));
-        Roll(parseInt(document.getElementById("timesInput").innerHTML));
+        console.log(parseInt(document.getElementById("timesInput").textContent));
+        console.log(document.getElementById("timesInput").textContent);
+        Roll(parseInt(document.getElementById("timesInput").textContent));
       });
     </script>
   </body>
