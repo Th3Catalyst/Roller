@@ -9,14 +9,25 @@
   <body>
     <div id="output"> Roll to Start </div>
     <button class="buttonStyle" id="rollerB">Roll</button><br>
+    <input style="filter:opacity(40%); font-style:italic; margin:0px!important;" type="text" id="timesInput" placeholder="enter roll amount" />
     <script>
-      function Roll() {
+      function sleep(ms) {
+          return new Promise(resolve => setTimeout(resolve, ms));
+      }
+      function Roll(times) {
         let values = [1,2,3,4,5,6,7];
-        for (let i = 0; i < 7; i++) {
-          document.getElementById("output").innerHTML = values[Math.floor(Math.random() * values.length)];
+        let mult;
+        for (let i = 0; i < times; i++) {
+          let value = values[Math.floor(Math.random() * values.length)];
+          document.getElementById("output").innerHTML = value;
+          mult = value;
+          sleep(10);
         };
+        return mult;
       };
-      document.getElementById("rollerB").addEventListener("click", Roll);
+      document.getElementById("rollerB").addEventListener("click", () => {
+        Roll(parseInt(document.getElementById("timesInput").innerHTML));
+      });
     </script>
   </body>
 </html>
