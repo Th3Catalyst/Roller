@@ -76,7 +76,7 @@ hr {
   background-color: black;
 }
 
-input[type=text] {
+input[type=number] {
   background-color: rgb(30, 30, 30);
   border-radius: 0.2em;
   color: #ffdf00;
@@ -84,7 +84,7 @@ input[type=text] {
   width: 3em;
   border: 2px solid #ffdf00;
 }
-input[type=text]:focus {
+input[type=number]:focus {
   outline: none;
 }
 
