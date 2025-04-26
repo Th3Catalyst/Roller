@@ -102,6 +102,7 @@ async function Roll(betVal = 0, div = "output1") {
 
 
 document.getElementById("rollerB").addEventListener("click", () => {
+    if (running) {return;};
     done = false;
     let bet = parseFloat(parseFloat(document.getElementById("moneyInput").value).toFixed(2));
     let times = parseInt(document.getElementById("timesInput").value);
@@ -122,7 +123,7 @@ document.getElementById("rollerB").addEventListener("click", () => {
         money = parseFloat(money.toFixed(2));
         document.getElementById("moneyOutput").innerHTML = "Money: " + money;
     }
-    if (running) {return;};
+    
     running = true;
     for (let i = 0; i < extraTimesL.length; i++) {
         extraTimesL[i].remove();
