@@ -5,31 +5,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="styles/style.css" rel="stylesheet" type="text/css" />
+    <script src="script.js" defer></script>
   </head>
   <body>
-    <div id="output"> Roll to Start </div>
-    <button class="buttonStyle" id="rollerB">Roll</button><br>
-    <input style="filter:opacity(40%); font-style:italic; margin:0px!important;" type="text" id="timesInput" placeholder="enter roll amount" />
-    <script>
-      function sleep(ms) {
-          return new Promise(resolve => setTimeout(resolve, ms));
-      }
-      function Roll(times) {
-        let values = [1,2,3,4,5,6,7];
-        let mult;
-        for (let i = 0; i < times; i++) {
-          let value = values[Math.floor(Math.random() * values.length)];
-          document.getElementById("output").innerHTML = value;
-          mult = value;
-          sleep(10);
-        };
-        return mult;
-      };
-      document.getElementById("rollerB").addEventListener("click", () => {
-        console.log(parseInt(document.getElementById("timesInput").value));
-        console.log(document.getElementById("timesInput").value);
-        Roll(parseInt(document.getElementById("timesInput").value));
-      });
-    </script>
+    <div id="moneyOutput">Money: 100</div>
+    <table>
+      <tr>
+        <td></td><td></td>
+        <td rowspan="3">
+          <button class="buttonStyle" id="rollerB">Roll</button>
+        </td>
+      </tr>
+      <tr>
+        <th>
+          <span>Rolls: </span>
+        </th>
+        <th>
+          <input type="text" id="timesInput" value="2" />
+        </th>
+      </tr>
+      <tr>
+        <th>
+          <span>Bet amount: </span>
+        </th>
+        <th>
+          <input type="text" id="moneyInput" value="10" />
+        </th>
+      </tr>
+    </table>
+    <br>
+    <div class="mult" id="output1"> Roll to Start </div><br>
+    <table id="chancesT">
+      <tr>
+        <th>
+          Multiplier
+        </th>
+        <th>
+          % chance
+        </th>
+      </tr>
+
+    </table>
+    
+    
+    
   </body>
 </html>

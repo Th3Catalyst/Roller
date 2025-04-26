@@ -1,0 +1,98 @@
+$animationTransition1: all 0.6s cubic-bezier(0.06, 0.98, 0.41, 0.93);
+$yellow: #ffdf00;
+$transparentYellow: #ffdf0066;
+$darkYellow: #886800;
+
+body {
+    background-color: black;
+    color: $yellow;
+}
+
+table {
+    margin: 2em auto;
+}
+
+hr {
+    border: 4px solid $yellow;
+    width: 70%;
+}
+
+#moneyOutput {
+    font-size: min(5em,15vw);
+    text-align: center;
+}
+.mult {
+    font-size: min(3em,10vw);
+    text-align: center;
+}
+
+#rollerB {
+    background-color: rgb(30,30,30);
+    border: 2px solid $yellow;
+    color: $yellow;
+    padding: 0.5em;
+    transition: $animationTransition1; 
+    &:hover {
+        background-color: $transparentYellow;
+        
+    }
+    
+    font-size: 2.5em;
+    cursor: pointer;
+    margin: 0.3em 0.7em;
+    min-width: 2.3em;
+    min-height: 2.3em;
+    border-radius: 0.5em;
+    display: inline-block !important; // Ensure buttons are inline-block
+}
+
+#chancesT {
+    border: 5px solid $transparentYellow;
+    font-size: 1.1em;
+    th {
+        font-weight: bold;
+        text-align: center;
+        background-color: $darkYellow;
+    }
+    td, th {
+        border: 1px solid $transparentYellow;
+        padding: 0.3em;
+        width: 6em;
+
+    }
+}
+
+input[type=text] {
+    background-color: rgb(30,30,30);
+    border-radius: 0.2em;
+    color: $yellow;
+    font-size: 2em;
+    width: 3em;
+    border: 2px solid $yellow;
+    &:focus {
+        outline: none;
+    }
+}
+
+@keyframes bounce {
+    0% {
+        transform: scale(100%);
+    }
+    50% {
+        transform: scale(120%);
+    }
+    100% {
+        transform: scale(100%);
+    }
+}
+
+@keyframes fade {
+    0%   {background-color: black;}
+    50%  {background-color: $darkYellow;}
+    100% {background-color: black;}
+}
+
+@keyframes width {
+    0% {width:0%;}
+    100% {width:70%;}
+}
