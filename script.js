@@ -163,7 +163,7 @@ document.getElementById("rollerB").addEventListener("click", () => {
         bar = document.createElement("hr");
         document.body.insertBefore(bar,target);
         bar.style.animation = "width 0.5s linear 0s 1";
-        sleep(710).then(() => {
+        sleep(710 + 10*times).then(() => {
             totalRevenue = parseFloat(totalRevenue.toFixed(2));
             console.log(typeof(totalRevenue), " ", totalRevenue);
             money += totalRevenue;
