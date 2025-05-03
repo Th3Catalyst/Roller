@@ -113,7 +113,7 @@ document.getElementById("rollerB").addEventListener("click", () => {
         alert("Please enter a valid number of times to roll");
         return;
     }
-    if (isNaN(bet)) {
+    if (isNaN(bet) || (bet < 0)) {
         alert("Please enter a valid number for the bet amount.");
         return;
     }
