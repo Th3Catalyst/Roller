@@ -6,6 +6,9 @@ let total;
 let bar;
 let done;
 
+
+
+
 function weightedRandom(list) {
 
     let totalProb = 0;
