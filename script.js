@@ -195,3 +195,19 @@ for (let i = 0; i < values.length; i++) {
     multCell.innerHTML = values[i].value + "x";
     chanceCell.innerHTML = values[i].rarity + "%";
 };
+
+// document.getElementById("test").addEventListener('click', () => {
+//     fetch('https://script.google.com/macros/s/AKfycbzxw8ncQBjZGSQ5uwvU6rxOyspTw4f0UieApLrzNdA/dev?user=nam', {
+//         method: 'POST',
+//         redirect: "follow",
+//         headers: {
+//             'Content-Type': 'text/plain;charset=utf-8'
+//         },
+//     }).then(response => {
+//         console.log('Request sent successfully');
+//         window.location.assign(`/index.html`);
+//     }).catch(error => {
+//         console.error('Error:', error);
+//     })
+    
+// })
